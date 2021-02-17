@@ -7,7 +7,7 @@
 
 import SelectorEngine from '../dom/selector-engine'
 import Manipulator from '../dom/manipulator'
-import { isElement } from './index'
+import { isElement, getDocument } from './index'
 
 /**
  * Constants
@@ -24,7 +24,7 @@ const PROPERTY_MARGIN = 'margin-right'
 
 class ScrollBarHelper {
   constructor() {
-    this._element = document.body
+    this._element = getDocument().body
   }
 
   // Public
