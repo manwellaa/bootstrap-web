@@ -215,10 +215,11 @@ const getjQuery = () => {
 const DOMContentLoadedCallbacks = []
 
 const onDOMContentLoaded = callback => {
-  if (getDocument().readyState === 'loading') {
+  const documentRef = getDocument()
+  if (documentRef.readyState === 'loading') {
     // add listener on the first call when the document is in loading state
     if (!DOMContentLoadedCallbacks.length) {
-      getDocument().addEventListener('DOMContentLoaded', () => {
+      documentRef.addEventListener('DOMContentLoaded', () => {
         for (const callback of DOMContentLoadedCallbacks) {
           callback()
         }

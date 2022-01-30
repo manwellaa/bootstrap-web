@@ -7,7 +7,7 @@
 
 import {
   defineJQueryPlugin,
-  getDocument
+  getDocument,
   getElementFromSelector,
   isDisabled,
   reflow,
